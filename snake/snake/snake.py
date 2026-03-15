@@ -474,7 +474,7 @@ def render(game_147: 'SnakeGame') -> 'str21':
             break
         sb_149.append('#')
         x_150 = int_add_947(x_150, 1)
-    sb_149.append('#\n')
+    sb_149.append('#\r\n')
     y_151: 'int14' = 0
     while True:
         t_789 = game_147.height
@@ -489,7 +489,7 @@ def render(game_147: 'SnakeGame') -> 'str21':
             p_153: 'Point' = Point(x_152, y_151)
             sb_149.append(cell_char_43(game_147, p_153))
             x_152 = int_add_947(x_152, 1)
-        sb_149.append('#\n')
+        sb_149.append('#\r\n')
         y_151 = int_add_947(y_151, 1)
     sb_149.append('#')
     x_154: 'int14' = 0
@@ -499,7 +499,7 @@ def render(game_147: 'SnakeGame') -> 'str21':
             break
         sb_149.append('#')
         x_154 = int_add_947(x_154, 1)
-    sb_149.append('#\n')
+    sb_149.append('#\r\n')
     status_text_155: 'str21'
     t_800: 'GameStatus' = game_147.status
     if isinstance17(t_800, Playing):
@@ -508,5 +508,5 @@ def render(game_147: 'SnakeGame') -> 'str21':
         status_text_155 = 'GAME OVER'
     else:
         status_text_155 = ''
-    sb_149.append(str_cat_961('Score: ', int_to_string_962(game_147.score), '  ', status_text_155, '\n'))
+    sb_149.append(str_cat_961('Score: ', int_to_string_962(game_147.score), '  ', status_text_155, '\r', '\n'))
     return ''.join(sb_149)
