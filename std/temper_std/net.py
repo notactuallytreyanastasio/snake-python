@@ -1,7 +1,7 @@
 from builtins import str as str4, int as int0, RuntimeError as RuntimeError1
 from typing import Union as Union3
 from concurrent.futures import Future as Future2
-from abc import ABCMeta as ABCMeta50, abstractmethod as abstractmethod52
+from abc import ABCMeta as ABCMeta5, abstractmethod as abstractmethod52
 from temper_core import std_net_send as std_net_send64
 std_net_send_2599 = std_net_send64
 class NetRequest:
@@ -25,7 +25,7 @@ class NetRequest:
         this_5.method_18 = 'GET'
         this_5.body_content_19 = None
         this_5.body_mime_type_20 = None
-class NetResponse(metaclass = ABCMeta50):
+class NetResponse(metaclass = ABCMeta5):
     @property
     @abstractmethod52
     def status(self) -> 'int0':

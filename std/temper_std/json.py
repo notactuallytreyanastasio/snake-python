@@ -1,45 +1,45 @@
-from abc import ABCMeta as ABCMeta50, abstractmethod as abstractmethod52
-from builtins import str as str4, RuntimeError as RuntimeError1, bool as bool18, int as int0, float as float53, Exception as Exception22, list as list7, isinstance as isinstance56, len as len10, tuple as tuple5
-from typing import Union as Union3, ClassVar as ClassVar51, Sequence as Sequence21, MutableSequence as MutableSequence19, Dict as Dict55, Any as Any58, TypeVar as TypeVar59, Generic as Generic60
+from abc import ABCMeta as ABCMeta5, abstractmethod as abstractmethod52
+from builtins import str as str4, RuntimeError as RuntimeError1, bool as bool19, int as int0, float as float53, Exception as Exception23, list as list8, isinstance as isinstance56, len as len11, tuple as tuple6
+from typing import Union as Union3, ClassVar as ClassVar51, Sequence as Sequence22, MutableSequence as MutableSequence20, Dict as Dict55, Any as Any58, TypeVar as TypeVar59, Generic as Generic60
 from types import MappingProxyType as MappingProxyType54
-from temper_core import Label as Label23, cast_by_type as cast_by_type57, string_from_code_point as string_from_code_point61, int_sub as int_sub24, list_get as list_get17, list_for_each as list_for_each25, mapped_for_each as mapped_for_each26, int_to_string as int_to_string13, int64_to_int32 as int64_to_int3227, int64_to_float64 as int64_to_float6428, float64_to_string as float64_to_string29, float64_to_int as float64_to_int30, float64_to_int64 as float64_to_int6431, string_to_int32 as string_to_int3232, string_to_float64 as string_to_float6433, string_to_int64 as string_to_int6434, list_get_or as list_get_or35, list_builder_set as list_builder_set36, int_add as int_add15, mapped_has as mapped_has37, map_builder_set as map_builder_set38, mapped_to_map as mapped_to_map39, string_get as string_get11, int_div as int_div40, string_next as string_next14, str_cat as str_cat12, int_mul as int_mul41, string_has_at_least as string_has_at_least42, require_string_index as require_string_index43, int64_mul as int64_mul44, int64_add as int64_add45, int64_sub as int64_sub46, int64_negate as int64_negate47, int64_to_int32_unsafe as int64_to_int32_unsafe48, float_not_eq as float_not_eq49
+from temper_core import Label as Label24, cast_by_type as cast_by_type57, string_from_code_point as string_from_code_point61, int_sub as int_sub25, list_get as list_get18, list_for_each as list_for_each26, mapped_for_each as mapped_for_each27, int_to_string as int_to_string14, int64_to_int32 as int64_to_int3228, int64_to_float64 as int64_to_float6429, float64_to_string as float64_to_string30, float64_to_int as float64_to_int31, float64_to_int64 as float64_to_int6432, string_to_int32 as string_to_int3233, string_to_float64 as string_to_float6434, string_to_int64 as string_to_int6435, list_get_or as list_get_or36, list_builder_set as list_builder_set37, int_add as int_add16, mapped_has as mapped_has38, map_builder_set as map_builder_set39, mapped_to_map as mapped_to_map40, string_get as string_get12, int_div as int_div41, string_next as string_next15, str_cat as str_cat13, int_mul as int_mul42, string_has_at_least as string_has_at_least43, require_string_index as require_string_index44, int64_mul as int64_mul45, int64_add as int64_add46, int64_sub as int64_sub47, int64_negate as int64_negate48, int64_to_int32_unsafe as int64_to_int32_unsafe49, float_not_eq as float_not_eq50
 from math import nan as nan62, inf as inf63
-int_sub_2547 = int_sub24
-len_2548 = len10
-list_get_2549 = list_get17
-list_for_each_2550 = list_for_each25
-mapped_for_each_2551 = mapped_for_each26
-int_to_string_2552 = int_to_string13
-int64_to_int32_2555 = int64_to_int3227
-int64_to_float64_2556 = int64_to_float6428
-float64_to_string_2557 = float64_to_string29
-float64_to_int_2558 = float64_to_int30
-float64_to_int64_2559 = float64_to_int6431
-string_to_int32_2560 = string_to_int3232
-string_to_float64_2561 = string_to_float6433
-string_to_int64_2562 = string_to_int6434
-list_2564 = list7
-list_get_or_2566 = list_get_or35
-list_builder_set_2567 = list_builder_set36
-int_add_2574 = int_add15
-mapped_has_2575 = mapped_has37
-map_builder_set_2577 = map_builder_set38
-tuple_2578 = tuple5
-mapped_to_map_2579 = mapped_to_map39
-string_get_2581 = string_get11
-int_div_2582 = int_div40
-string_next_2583 = string_next14
-str_cat_2586 = str_cat12
-int_mul_2588 = int_mul41
-string_has_at_least_2589 = string_has_at_least42
-require_string_index_2592 = require_string_index43
-int64_mul_2593 = int64_mul44
-int64_add_2594 = int64_add45
-int64_sub_2595 = int64_sub46
-int64_negate_2596 = int64_negate47
-int64_to_int32_unsafe_2597 = int64_to_int32_unsafe48
-float_not_eq_2598 = float_not_eq49
-class InterchangeContext(metaclass = ABCMeta50):
+int_sub_2547 = int_sub25
+len_2548 = len11
+list_get_2549 = list_get18
+list_for_each_2550 = list_for_each26
+mapped_for_each_2551 = mapped_for_each27
+int_to_string_2552 = int_to_string14
+int64_to_int32_2555 = int64_to_int3228
+int64_to_float64_2556 = int64_to_float6429
+float64_to_string_2557 = float64_to_string30
+float64_to_int_2558 = float64_to_int31
+float64_to_int64_2559 = float64_to_int6432
+string_to_int32_2560 = string_to_int3233
+string_to_float64_2561 = string_to_float6434
+string_to_int64_2562 = string_to_int6435
+list_2564 = list8
+list_get_or_2566 = list_get_or36
+list_builder_set_2567 = list_builder_set37
+int_add_2574 = int_add16
+mapped_has_2575 = mapped_has38
+map_builder_set_2577 = map_builder_set39
+tuple_2578 = tuple6
+mapped_to_map_2579 = mapped_to_map40
+string_get_2581 = string_get12
+int_div_2582 = int_div41
+string_next_2583 = string_next15
+str_cat_2586 = str_cat13
+int_mul_2588 = int_mul42
+string_has_at_least_2589 = string_has_at_least43
+require_string_index_2592 = require_string_index44
+int64_mul_2593 = int64_mul45
+int64_add_2594 = int64_add46
+int64_sub_2595 = int64_sub47
+int64_negate_2596 = int64_negate48
+int64_to_int32_unsafe_2597 = int64_to_int32_unsafe49
+float_not_eq_2598 = float_not_eq50
+class InterchangeContext(metaclass = ABCMeta5):
     def get_header(this_78, header_name_376: 'str4') -> 'Union3[str4, None]':
         raise RuntimeError1()
 class NullInterchangeContext(InterchangeContext):
@@ -50,7 +50,7 @@ class NullInterchangeContext(InterchangeContext):
     def __init__(this_188) -> None:
         pass
 NullInterchangeContext.instance = NullInterchangeContext()
-class JsonProducer(metaclass = ABCMeta50):
+class JsonProducer(metaclass = ABCMeta5):
     @property
     @abstractmethod52
     def interchange_context(self) -> 'InterchangeContext':
@@ -67,7 +67,7 @@ class JsonProducer(metaclass = ABCMeta50):
         raise RuntimeError1()
     def null_value(this_85) -> 'None':
         raise RuntimeError1()
-    def boolean_value(this_86, x_398: 'bool18') -> 'None':
+    def boolean_value(this_86, x_398: 'bool19') -> 'None':
         raise RuntimeError1()
     def int32_value(this_87, x_401: 'int0') -> 'None':
         raise RuntimeError1()
@@ -83,16 +83,16 @@ class JsonProducer(metaclass = ABCMeta50):
     @property
     def parse_error_receiver(this_92) -> 'Union3[JsonParseErrorReceiver, None]':
         return None
-class JsonSyntaxTree(metaclass = ABCMeta50):
+class JsonSyntaxTree(metaclass = ABCMeta5):
     def produce(this_93, p_418: 'JsonProducer') -> 'None':
         raise RuntimeError1()
 class JsonObject(JsonSyntaxTree):
-    properties_420: 'MappingProxyType54[str4, (Sequence21[JsonSyntaxTree])]'
+    properties_420: 'MappingProxyType54[str4, (Sequence22[JsonSyntaxTree])]'
     __slots__ = ('properties_420',)
     def property_value_or_null(this_94, property_key_422: 'str4') -> 'Union3[JsonSyntaxTree, None]':
         "The JSON value tree associated with the given property key or null\nif there is no such value.\n\nThe properties map contains a list of sub-trees because JSON\nallows duplicate properties.  ECMA-404 \xa76 notes (emphasis added):\n\n> The JSON syntax does not impose any restrictions on the strings\n> used as names, **does not require that name strings be unique**,\n> and does not assign any significance to the ordering of\n> name/value pairs.\n\nWhen widely used JSON parsers need to relate a property key\nto a single value, they tend to prefer the last key/value pair\nfrom a JSON object.  For example:\n\nJS:\n\n    JSON.parse('{\"x\":\"first\",\"x\":\"last\"}').x === 'last'\n\nPython:\n\n    import json\n    json.loads('{\"x\":\"first\",\"x\":\"last\"}')['x'] == 'last'\n\nC#:\n\n   using System.Text.Json;\n\t\tJsonDocument d = JsonDocument.Parse(\n\t\t\t\"\"\"\n\t\t\t{\"x\":\"first\",\"x\":\"last\"}\n\t\t\t\"\"\"\n\t\t);\n\t\td.RootElement.GetProperty(\"x\").GetString() == \"last\"\n\nthis__94: JsonObject\n\npropertyKey__422: String\n"
         return_209: 'Union3[JsonSyntaxTree, None]'
-        tree_list_424: 'Sequence21[JsonSyntaxTree]' = this_94.properties_420.get(property_key_422, ())
+        tree_list_424: 'Sequence22[JsonSyntaxTree]' = this_94.properties_420.get(property_key_422, ())
         last_index_425: 'int0' = int_sub_2547(len_2548(tree_list_424), 1)
         if last_index_425 >= 0:
             return_209 = list_get_2549(tree_list_424, last_index_425)
@@ -109,20 +109,20 @@ class JsonObject(JsonSyntaxTree):
         return return_210
     def produce(this_96, p_430: 'JsonProducer') -> 'None':
         p_430.start_object()
-        def fn_2513(k_432: 'str4', vs_433: 'Sequence21[JsonSyntaxTree]') -> 'None':
+        def fn_2513(k_432: 'str4', vs_433: 'Sequence22[JsonSyntaxTree]') -> 'None':
             def fn_2510(v_434: 'JsonSyntaxTree') -> 'None':
                 p_430.object_key(k_432)
                 v_434.produce(p_430)
             list_for_each_2550(vs_433, fn_2510)
         mapped_for_each_2551(this_96.properties_420, fn_2513)
         p_430.end_object()
-    def __init__(this_206, properties_436: 'MappingProxyType54[str4, (Sequence21[JsonSyntaxTree])]') -> None:
+    def __init__(this_206, properties_436: 'MappingProxyType54[str4, (Sequence22[JsonSyntaxTree])]') -> None:
         this_206.properties_420 = properties_436
     @property
-    def properties(this_875) -> 'MappingProxyType54[str4, (Sequence21[JsonSyntaxTree])]':
+    def properties(this_875) -> 'MappingProxyType54[str4, (Sequence22[JsonSyntaxTree])]':
         return this_875.properties_420
 class JsonArray(JsonSyntaxTree):
-    elements_437: 'Sequence21[JsonSyntaxTree]'
+    elements_437: 'Sequence22[JsonSyntaxTree]'
     __slots__ = ('elements_437',)
     def produce(this_97, p_439: 'JsonProducer') -> 'None':
         p_439.start_array()
@@ -130,20 +130,20 @@ class JsonArray(JsonSyntaxTree):
             v_441.produce(p_439)
         list_for_each_2550(this_97.elements_437, fn_2503)
         p_439.end_array()
-    def __init__(this_212, elements_443: 'Sequence21[JsonSyntaxTree]') -> None:
+    def __init__(this_212, elements_443: 'Sequence22[JsonSyntaxTree]') -> None:
         this_212.elements_437 = elements_443
     @property
-    def elements(this_878) -> 'Sequence21[JsonSyntaxTree]':
+    def elements(this_878) -> 'Sequence22[JsonSyntaxTree]':
         return this_878.elements_437
 class JsonBoolean(JsonSyntaxTree):
-    content_444: 'bool18'
+    content_444: 'bool19'
     __slots__ = ('content_444',)
     def produce(this_98, p_446: 'JsonProducer') -> 'None':
         p_446.boolean_value(this_98.content_444)
-    def __init__(this_216, content_449: 'bool18') -> None:
+    def __init__(this_216, content_449: 'bool19') -> None:
         this_216.content_444 = content_449
     @property
-    def content(this_881) -> 'bool18':
+    def content(this_881) -> 'bool19':
         return this_881.content_444
 class JsonNull(JsonSyntaxTree):
     __slots__ = ()
@@ -161,7 +161,7 @@ class JsonString(JsonSyntaxTree):
     @property
     def content(this_884) -> 'str4':
         return this_884.content_454
-class JsonNumeric(JsonSyntaxTree, metaclass = ABCMeta50):
+class JsonNumeric(JsonSyntaxTree, metaclass = ABCMeta5):
     def as_json_numeric_token(this_101) -> 'str4':
         raise RuntimeError1()
     def as_int32(this_102) -> 'int0':
@@ -238,7 +238,7 @@ class JsonNumericToken(JsonNumeric):
         try:
             t_1774 = string_to_int32_2560(this_122.content_510)
             return_254 = t_1774
-        except Exception22:
+        except Exception23:
             t_1775 = string_to_float64_2561(this_122.content_510)
             return_254 = float64_to_int_2558(t_1775)
         return return_254
@@ -249,7 +249,7 @@ class JsonNumericToken(JsonNumeric):
         try:
             t_1770 = string_to_int64_2562(this_123.content_510)
             return_255 = t_1770
-        except Exception22:
+        except Exception23:
             t_1771 = string_to_float64_2561(this_123.content_510)
             return_255 = float64_to_int64_2559(t_1771)
         return return_255
@@ -262,9 +262,9 @@ class JsonNumericToken(JsonNumeric):
         return this_896.content_510
 class JsonTextProducer(JsonProducer):
     interchange_context_524: 'InterchangeContext'
-    buffer_525: 'list7[str4]'
-    stack_526: 'MutableSequence19[int0]'
-    well_formed_527: 'bool18'
+    buffer_525: 'list8[str4]'
+    stack_526: 'MutableSequence20[int0]'
+    well_formed_527: 'bool19'
     __slots__ = ('interchange_context_524', 'buffer_525', 'stack_526', 'well_formed_527')
     def __init__(this_125, interchange_context_938: 'Union3[InterchangeContext, None]' = None) -> None:
         _interchange_context_938: 'Union3[InterchangeContext, None]' = interchange_context_938
@@ -274,9 +274,9 @@ class JsonTextProducer(JsonProducer):
         else:
             interchange_context_529 = _interchange_context_938
         this_125.interchange_context_524 = interchange_context_529
-        t_2470: 'list7[str4]' = ['']
+        t_2470: 'list8[str4]' = ['']
         this_125.buffer_525 = t_2470
-        t_2471: 'MutableSequence19[int0]' = list_2564()
+        t_2471: 'MutableSequence20[int0]' = list_2564()
         this_125.stack_526 = t_2471
         this_125.stack_526.append(5)
         this_125.well_formed_527 = True
@@ -287,7 +287,7 @@ class JsonTextProducer(JsonProducer):
         t_2461: 'int0'
         t_2464: 'int0'
         t_2466: 'int0'
-        t_1728: 'bool18'
+        t_1728: 'bool19'
         current_state_535: 'int0' = this_127.state_531()
         if current_state_535 == 3:
             t_2461 = len_2548(this_127.stack_526)
@@ -312,7 +312,7 @@ class JsonTextProducer(JsonProducer):
         this_128.buffer_525.append('{')
         this_128.stack_526.append(0)
     def end_object(this_129) -> 'None':
-        t_1716: 'bool18'
+        t_1716: 'bool19'
         this_129.buffer_525.append('}')
         current_state_540: 'int0' = this_129.state_531()
         if 0 == current_state_540:
@@ -341,7 +341,7 @@ class JsonTextProducer(JsonProducer):
         this_131.buffer_525.append('[')
         this_131.stack_526.append(3)
     def end_array(this_132) -> 'None':
-        t_1704: 'bool18'
+        t_1704: 'bool19'
         this_132.buffer_525.append(']')
         current_state_549: 'int0' = this_132.state_531()
         if 3 == current_state_549:
@@ -355,7 +355,7 @@ class JsonTextProducer(JsonProducer):
     def null_value(this_133) -> 'None':
         this_133.before_value_533()
         this_133.buffer_525.append('null')
-    def boolean_value(this_134, x_553: 'bool18') -> 'None':
+    def boolean_value(this_134, x_553: 'bool19') -> 'None':
         t_1700: 'str4'
         this_134.before_value_533()
         if x_553:
@@ -384,8 +384,8 @@ class JsonTextProducer(JsonProducer):
     def to_json_string(this_140) -> 'str4':
         return_272: 'str4'
         t_2423: 'int0'
-        t_1689: 'bool18'
-        t_1690: 'bool18'
+        t_1689: 'bool19'
+        t_1690: 'bool19'
         if this_140.well_formed_527:
             if len_2548(this_140.stack_526) == 1:
                 t_2423 = this_140.state_531()
@@ -403,20 +403,20 @@ class JsonTextProducer(JsonProducer):
     @property
     def interchange_context(this_906) -> 'InterchangeContext':
         return this_906.interchange_context_524
-class JsonParseErrorReceiver(metaclass = ABCMeta50):
+class JsonParseErrorReceiver(metaclass = ABCMeta5):
     def explain_json_error(this_141, explanation_588: 'str4') -> 'None':
         raise RuntimeError1()
 class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
-    stack_590: 'MutableSequence19[(MutableSequence19[JsonSyntaxTree])]'
+    stack_590: 'MutableSequence20[(MutableSequence20[JsonSyntaxTree])]'
     error_591: 'Union3[str4, None]'
     __slots__ = ('stack_590', 'error_591')
     @property
     def interchange_context(this_142) -> 'InterchangeContext':
         return NullInterchangeContext.instance
     def __init__(this_143) -> None:
-        t_2419: 'MutableSequence19[(MutableSequence19[JsonSyntaxTree])]' = list_2564()
+        t_2419: 'MutableSequence20[(MutableSequence20[JsonSyntaxTree])]' = list_2564()
         this_143.stack_590 = t_2419
-        t_2420: 'MutableSequence19[JsonSyntaxTree]' = list_2564()
+        t_2420: 'MutableSequence20[JsonSyntaxTree]' = list_2564()
         this_143.stack_590.append(t_2420)
         this_143.error_591 = None
     def store_value_596(this_144, v_597: 'JsonSyntaxTree') -> 'None':
@@ -425,25 +425,25 @@ class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
             t_2416 = len_2548(this_144.stack_590)
             list_get_2549(this_144.stack_590, int_sub_2547(t_2416, 1)).append(v_597)
     def start_object(this_145) -> 'None':
-        t_2413: 'MutableSequence19[JsonSyntaxTree]' = list_2564()
+        t_2413: 'MutableSequence20[JsonSyntaxTree]' = list_2564()
         this_145.stack_590.append(t_2413)
     def end_object(this_146) -> 'None':
-        t_2402: 'Union3[(Dict55[str4, (MutableSequence19[JsonSyntaxTree])]), None]'
+        t_2402: 'Union3[(Dict55[str4, (MutableSequence20[JsonSyntaxTree])]), None]'
         t_2411: 'JsonObject'
         t_1656: 'JsonString'
         t_1658: 'JsonString'
-        t_1664: 'Dict55[str4, (MutableSequence19[JsonSyntaxTree])]'
-        t_1666: 'Dict55[str4, (MutableSequence19[JsonSyntaxTree])]'
-        t_1668: 'Sequence21[JsonSyntaxTree]'
-        t_1669: 'Sequence21[JsonSyntaxTree]'
-        t_1671: 'MutableSequence19[JsonSyntaxTree]'
-        t_1672: 'MutableSequence19[JsonSyntaxTree]'
-        with Label23() as fn_602:
+        t_1664: 'Dict55[str4, (MutableSequence20[JsonSyntaxTree])]'
+        t_1666: 'Dict55[str4, (MutableSequence20[JsonSyntaxTree])]'
+        t_1668: 'Sequence22[JsonSyntaxTree]'
+        t_1669: 'Sequence22[JsonSyntaxTree]'
+        t_1671: 'MutableSequence20[JsonSyntaxTree]'
+        t_1672: 'MutableSequence20[JsonSyntaxTree]'
+        with Label24() as fn_602:
             if not this_146.stack_590:
                 fn_602.break_()
-            ls_603: 'MutableSequence19[JsonSyntaxTree]' = this_146.stack_590.pop()
-            m_604: 'Dict55[str4, (Sequence21[JsonSyntaxTree])]' = {}
-            multis_605: 'Union3[(Dict55[str4, (MutableSequence19[JsonSyntaxTree])]), None]' = None
+            ls_603: 'MutableSequence20[JsonSyntaxTree]' = this_146.stack_590.pop()
+            m_604: 'Dict55[str4, (Sequence22[JsonSyntaxTree])]' = {}
+            multis_605: 'Union3[(Dict55[str4, (MutableSequence20[JsonSyntaxTree])]), None]' = None
             i_606: 'int0' = 0
             n_607: 'int0' = len_2548(ls_603) & -2
             while i_606 < n_607:
@@ -467,7 +467,7 @@ class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
                     else:
                         t_1664 = multis_605
                     t_1666 = t_1664
-                    mb_611: 'Dict55[str4, (MutableSequence19[JsonSyntaxTree])]' = t_1666
+                    mb_611: 'Dict55[str4, (MutableSequence20[JsonSyntaxTree])]' = t_1666
                     if not mapped_has_2575(mb_611, key_609):
                         t_1668 = m_604[key_609]
                         t_1669 = t_1668
@@ -477,10 +477,10 @@ class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
                     t_1672.append(value_610)
                 else:
                     map_builder_set_2577(m_604, key_609, (value_610,))
-            multis_612: 'Union3[(Dict55[str4, (MutableSequence19[JsonSyntaxTree])]), None]' = multis_605
+            multis_612: 'Union3[(Dict55[str4, (MutableSequence20[JsonSyntaxTree])]), None]' = multis_605
             if not multis_612 is None:
-                def fn_2392(k_613: 'str4', vs_614: 'MutableSequence19[JsonSyntaxTree]') -> 'None':
-                    t_2390: 'Sequence21[JsonSyntaxTree]' = tuple_2578(vs_614)
+                def fn_2392(k_613: 'str4', vs_614: 'MutableSequence20[JsonSyntaxTree]') -> 'None':
+                    t_2390: 'Sequence22[JsonSyntaxTree]' = tuple_2578(vs_614)
                     map_builder_set_2577(m_604, k_613, t_2390)
                 mapped_for_each_2551(multis_612, fn_2392)
             t_2411 = JsonObject(mapped_to_map_2579(m_604))
@@ -489,20 +489,20 @@ class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
         t_2388: 'JsonString' = JsonString(key_616)
         this_147.store_value_596(t_2388)
     def start_array(this_148) -> 'None':
-        t_2386: 'MutableSequence19[JsonSyntaxTree]' = list_2564()
+        t_2386: 'MutableSequence20[JsonSyntaxTree]' = list_2564()
         this_148.stack_590.append(t_2386)
     def end_array(this_149) -> 'None':
         t_2384: 'JsonArray'
-        with Label23() as fn_621:
+        with Label24() as fn_621:
             if not this_149.stack_590:
                 fn_621.break_()
-            ls_622: 'MutableSequence19[JsonSyntaxTree]' = this_149.stack_590.pop()
+            ls_622: 'MutableSequence20[JsonSyntaxTree]' = this_149.stack_590.pop()
             t_2384 = JsonArray(tuple_2578(ls_622))
             this_149.store_value_596(t_2384)
     def null_value(this_150) -> 'None':
         t_2379: 'JsonNull' = JsonNull()
         this_150.store_value_596(t_2379)
-    def boolean_value(this_151, x_626: 'bool18') -> 'None':
+    def boolean_value(this_151, x_626: 'bool19') -> 'None':
         t_2377: 'JsonBoolean' = JsonBoolean(x_626)
         this_151.store_value_596(t_2377)
     def int32_value(this_152, x_629: 'int0') -> 'None':
@@ -521,14 +521,14 @@ class JsonSyntaxTreeProducer(JsonProducer, JsonParseErrorReceiver):
         t_2367: 'JsonString' = JsonString(x_641)
         this_156.store_value_596(t_2367)
     def to_json_syntax_tree(this_157) -> 'JsonSyntaxTree':
-        t_1629: 'bool18'
+        t_1629: 'bool19'
         if len_2548(this_157.stack_590) != 1:
             t_1629 = True
         else:
             t_1629 = not this_157.error_591 is None
         if t_1629:
             raise RuntimeError1()
-        ls_645: 'MutableSequence19[JsonSyntaxTree]' = list_get_2549(this_157.stack_590, 0)
+        ls_645: 'MutableSequence20[JsonSyntaxTree]' = list_get_2549(this_157.stack_590, 0)
         if len_2548(ls_645) != 1:
             raise RuntimeError1()
         return list_get_2549(ls_645, 0)
@@ -544,11 +544,11 @@ def parse_json_value_356(source_text_670: 'str4', i_671: 'int0', out_672: 'JsonP
     return_302: 'int0'
     t_2201: 'int0'
     t_2204: 'int0'
-    t_1412: 'bool18'
-    with Label23() as fn_673:
+    t_1412: 'bool19'
+    with Label24() as fn_673:
         t_2201 = skip_json_spaces_355(source_text_670, i_671)
         i_671 = t_2201
-        if not len10(source_text_670) > i_671:
+        if not len11(source_text_670) > i_671:
             expected_token_error_353(source_text_670, i_671, out_672, 'JSON value')
             return_302 = -1
             fn_673.break_()
@@ -572,16 +572,16 @@ def parse_json_value_356(source_text_670: 'str4', i_671: 'int0', out_672: 'JsonP
                 return_302 = parse_json_number_365(source_text_670, i_671, out_672)
     return return_302
 T_161 = TypeVar59('T_161', bound = Any58, covariant = True)
-class JsonAdapter(Generic60[T_161], metaclass = ABCMeta50):
+class JsonAdapter(Generic60[T_161], metaclass = ABCMeta5):
     def encode_to_json(this_162, x_765: 'T_161', p_766: 'JsonProducer') -> 'None':
         raise RuntimeError1()
     def decode_from_json(this_163, t_769: 'JsonSyntaxTree', ic_770: 'InterchangeContext') -> 'T_161':
         raise RuntimeError1()
-class BooleanJsonAdapter_164(JsonAdapter['bool18']):
+class BooleanJsonAdapter_164(JsonAdapter['bool19']):
     __slots__ = ()
-    def encode_to_json(this_165, x_773: 'bool18', p_774: 'JsonProducer') -> 'None':
+    def encode_to_json(this_165, x_773: 'bool19', p_774: 'JsonProducer') -> 'None':
         p_774.boolean_value(x_773)
-    def decode_from_json(this_166, t_777: 'JsonSyntaxTree', ic_778: 'InterchangeContext') -> 'bool18':
+    def decode_from_json(this_166, t_777: 'JsonSyntaxTree', ic_778: 'InterchangeContext') -> 'bool19':
         t_1391: 'JsonBoolean'
         t_1391 = cast_by_type57(t_777, JsonBoolean)
         return t_1391.content
@@ -628,21 +628,21 @@ class StringJsonAdapter_176(JsonAdapter['str4']):
     def __init__(this_335) -> None:
         pass
 T_180 = TypeVar59('T_180', bound = Any58)
-class ListJsonAdapter_179(JsonAdapter['Sequence21[T_180]']):
+class ListJsonAdapter_179(JsonAdapter['Sequence22[T_180]']):
     adapter_for_t_822: 'JsonAdapter[T_180]'
     __slots__ = ('adapter_for_t_822',)
-    def encode_to_json(this_181, x_824: 'Sequence21[T_180]', p_825: 'JsonProducer') -> 'None':
+    def encode_to_json(this_181, x_824: 'Sequence22[T_180]', p_825: 'JsonProducer') -> 'None':
         p_825.start_array()
         def fn_2174(el_827: 'T_180') -> 'None':
             this_181.adapter_for_t_822.encode_to_json(el_827, p_825)
         list_for_each_2550(x_824, fn_2174)
         p_825.end_array()
-    def decode_from_json(this_182, t_829: 'JsonSyntaxTree', ic_830: 'InterchangeContext') -> 'Sequence21[T_180]':
+    def decode_from_json(this_182, t_829: 'JsonSyntaxTree', ic_830: 'InterchangeContext') -> 'Sequence22[T_180]':
         t_1369: 'T_180'
-        b_832: 'MutableSequence19[T_180]' = list_2564()
+        b_832: 'MutableSequence20[T_180]' = list_2564()
         t_1364: 'JsonArray'
         t_1364 = cast_by_type57(t_829, JsonArray)
-        elements_833: 'Sequence21[JsonSyntaxTree]' = t_1364.elements
+        elements_833: 'Sequence22[JsonSyntaxTree]' = t_1364.elements
         n_834: 'int0' = len_2548(elements_833)
         i_835: 'int0' = 0
         while i_835 < n_834:
@@ -672,8 +672,8 @@ class OrNullJsonAdapter(JsonAdapter['Union3[T_184, None]']):
         return return_350
     def __init__(this_346, adapter_for_t_851: 'JsonAdapter[T_184]') -> None:
         this_346.adapter_for_t_841 = adapter_for_t_851
-hex_digits_373: 'Sequence21[str4]' = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f')
-def encode_hex4_352(cp_580: 'int0', buffer_581: 'list7[str4]') -> 'None':
+hex_digits_373: 'Sequence22[str4]' = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f')
+def encode_hex4_352(cp_580: 'int0', buffer_581: 'list8[str4]') -> 'None':
     b0_583: 'int0' = int_div_2582(cp_580, 4096) & 15
     b1_584: 'int0' = int_div_2582(cp_580, 256) & 15
     b2_585: 'int0' = int_div_2582(cp_580, 16) & 15
@@ -686,16 +686,16 @@ def encode_hex4_352(cp_580: 'int0', buffer_581: 'list7[str4]') -> 'None':
     buffer_581.append(t_2486)
     t_2488: 'str4' = list_get_2549(hex_digits_373, b3_586)
     buffer_581.append(t_2488)
-def encode_json_string_351(x_572: 'str4', buffer_573: 'list7[str4]') -> 'None':
-    t_1745: 'bool18'
-    t_1746: 'bool18'
+def encode_json_string_351(x_572: 'str4', buffer_573: 'list8[str4]') -> 'None':
+    t_1745: 'bool19'
+    t_1746: 'bool19'
     t_1747: 'str4'
     t_1748: 'str4'
     buffer_573.append('"')
     i_575: 'int0' = 0
     emitted_576: 'int0' = i_575
     while True:
-        if not len10(x_572) > i_575:
+        if not len11(x_572) > i_575:
             break
         cp_577: 'int0' = string_get_2581(x_572, i_575)
         if cp_577 == 8:
@@ -745,7 +745,7 @@ def expected_token_error_353(source_text_653: 'str4', i_654: 'int0', out_655: 'J
     t_2358: 'int0'
     t_2359: 'str4'
     gotten_658: 'str4'
-    if len10(source_text_653) > i_654:
+    if len11(source_text_653) > i_654:
         t_2358 = len_2548(source_text_653)
         t_2359 = source_text_653[i_654 : t_2358]
         gotten_658 = str_cat_2586('`', t_2359, '`')
@@ -755,11 +755,11 @@ def expected_token_error_353(source_text_653: 'str4', i_654: 'int0', out_655: 'J
 def skip_json_spaces_355(source_text_667: 'str4', i_668: 'int0') -> 'int0':
     t_2355: 'int0'
     t_2356: 'int0'
-    t_1616: 'bool18'
-    t_1617: 'bool18'
-    t_1618: 'bool18'
+    t_1616: 'bool19'
+    t_1617: 'bool19'
+    t_1618: 'bool19'
     while True:
-        if not len10(source_text_667) > i_668:
+        if not len11(source_text_667) > i_668:
             break
         t_2355 = string_get_2581(source_text_667, i_668)
         if t_2355 == 9:
@@ -782,11 +782,11 @@ def skip_json_spaces_355(source_text_667: 'str4', i_668: 'int0') -> 'int0':
 def decode_hex_unsigned_361(source_text_708: 'str4', start_709: 'int0', limit_710: 'int0') -> 'int0':
     return_307: 'int0'
     t_2353: 'int0'
-    t_1609: 'bool18'
-    t_1610: 'bool18'
-    t_1611: 'bool18'
+    t_1609: 'bool19'
+    t_1610: 'bool19'
+    t_1611: 'bool19'
     t_1612: 'int0'
-    with Label23() as fn_711:
+    with Label24() as fn_711:
         n_712: 'int0' = 0
         i_713: 'int0' = start_709
         while True:
@@ -822,7 +822,7 @@ def decode_hex_unsigned_361(source_text_708: 'str4', start_709: 'int0', limit_71
             i_713 = t_2353
         return_307 = n_712
     return return_307
-def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'list7[str4]', err_out_695: 'JsonProducer') -> 'int0':
+def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'list8[str4]', err_out_695: 'JsonProducer') -> 'int0':
     return_306: 'int0'
     t_2326: 'int0'
     t_2328: 'int0'
@@ -835,19 +835,19 @@ def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'li
     t_2342: 'int0'
     t_2347: 'int0'
     t_2350: 'int0'
-    t_1570: 'bool18'
-    t_1579: 'bool18'
-    t_1580: 'bool18'
+    t_1570: 'bool19'
+    t_1579: 'bool19'
+    t_1580: 'bool19'
     t_1588: 'int0'
     t_1589: 'int0'
     t_1591: 'int0'
     t_1593: 'int0'
-    t_1594: 'bool18'
-    t_1595: 'bool18'
-    t_1597: 'bool18'
-    t_1601: 'bool18'
-    with Label23() as fn_696:
-        if not len10(source_text_692) > i_693:
+    t_1594: 'bool19'
+    t_1595: 'bool19'
+    t_1597: 'bool19'
+    t_1601: 'bool19'
+    with Label24() as fn_696:
+        if not len11(source_text_692) > i_693:
             t_1570 = True
         else:
             t_2326 = string_get_2581(source_text_692, i_693)
@@ -861,7 +861,7 @@ def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'li
         lead_surrogate_697: 'int0' = -1
         consumed_698: 'int0' = i_693
         while True:
-            if not len10(source_text_692) > i_693:
+            if not len11(source_text_692) > i_693:
                 break
             cp_699: 'int0' = string_get_2581(source_text_692, i_693)
             if cp_699 == 34:
@@ -869,12 +869,12 @@ def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'li
             t_2331 = string_next_2583(source_text_692, i_693)
             i_next_700: 'int0' = t_2331
             end_701: 'int0' = len_2548(source_text_692)
-            need_to_flush_702: 'bool18' = False
+            need_to_flush_702: 'bool19' = False
             if cp_699 != 92:
                 t_1593 = cp_699
             else:
                 need_to_flush_702 = True
-                if not len10(source_text_692) > i_next_700:
+                if not len11(source_text_692) > i_next_700:
                     expected_token_error_353(source_text_692, i_next_700, err_out_695, 'escape sequence')
                     return_306 = -1
                     fn_696.break_()
@@ -961,7 +961,7 @@ def parse_json_string_to_360(source_text_692: 'str4', i_693: 'int0', sb_694: 'li
                     sb_694.append(string_from_code_point61(decoded_cp_703))
                 consumed_698 = i_next_700
             i_693 = i_next_700
-        if not len10(source_text_692) > i_693:
+        if not len11(source_text_692) > i_693:
             t_1601 = True
         else:
             t_2347 = string_get_2581(source_text_692, i_693)
@@ -993,16 +993,16 @@ def parse_json_object_357(source_text_674: 'str4', i_675: 'int0', out_676: 'Json
     t_2318: 'int0'
     t_2319: 'int0'
     t_2321: 'int0'
-    t_1533: 'bool18'
-    t_1539: 'bool18'
+    t_1533: 'bool19'
+    t_1539: 'bool19'
     t_1545: 'int0'
     t_1547: 'int0'
-    t_1551: 'bool18'
+    t_1551: 'bool19'
     t_1555: 'int0'
-    t_1560: 'bool18'
-    t_1565: 'bool18'
-    with Label23() as fn_677:
-        if not len10(source_text_674) > i_675:
+    t_1560: 'bool19'
+    t_1565: 'bool19'
+    with Label24() as fn_677:
+        if not len11(source_text_674) > i_675:
             t_1533 = True
         else:
             t_2296 = string_get_2581(source_text_674, i_675)
@@ -1015,14 +1015,14 @@ def parse_json_object_357(source_text_674: 'str4', i_675: 'int0', out_676: 'Json
         t_2299 = string_next_2583(source_text_674, i_675)
         t_2300 = skip_json_spaces_355(source_text_674, t_2299)
         i_675 = t_2300
-        if len10(source_text_674) > i_675:
+        if len11(source_text_674) > i_675:
             t_2302 = string_get_2581(source_text_674, i_675)
             t_1539 = t_2302 != 125
         else:
             t_1539 = False
         if t_1539:
             while True:
-                key_buffer_678: 'list7[str4]' = ['']
+                key_buffer_678: 'list8[str4]' = ['']
                 after_key_679: 'int0' = parse_json_string_to_360(source_text_674, i_675, key_buffer_678, out_676)
                 if not after_key_679 >= 0:
                     return_303 = -1
@@ -1033,7 +1033,7 @@ def parse_json_object_357(source_text_674: 'str4', i_675: 'int0', out_676: 'Json
                 t_1547 = t_1545
                 t_2308 = skip_json_spaces_355(source_text_674, t_1547)
                 i_675 = t_2308
-                if len10(source_text_674) > i_675:
+                if len11(source_text_674) > i_675:
                     t_2310 = string_get_2581(source_text_674, i_675)
                     t_1551 = t_2310 == 58
                 else:
@@ -1053,7 +1053,7 @@ def parse_json_object_357(source_text_674: 'str4', i_675: 'int0', out_676: 'Json
                     fn_677.break_()
                 t_2315 = skip_json_spaces_355(source_text_674, i_675)
                 i_675 = t_2315
-                if len10(source_text_674) > i_675:
+                if len11(source_text_674) > i_675:
                     t_2317 = string_get_2581(source_text_674, i_675)
                     t_1560 = t_2317 == 44
                 else:
@@ -1064,7 +1064,7 @@ def parse_json_object_357(source_text_674: 'str4', i_675: 'int0', out_676: 'Json
                     i_675 = t_2319
                 else:
                     break
-        if len10(source_text_674) > i_675:
+        if len11(source_text_674) > i_675:
             t_2321 = string_get_2581(source_text_674, i_675)
             t_1565 = t_2321 == 125
         else:
@@ -1087,13 +1087,13 @@ def parse_json_array_358(source_text_681: 'str4', i_682: 'int0', out_683: 'JsonP
     t_2288: 'int0'
     t_2289: 'int0'
     t_2291: 'int0'
-    t_1509: 'bool18'
-    t_1515: 'bool18'
+    t_1509: 'bool19'
+    t_1515: 'bool19'
     t_1518: 'int0'
-    t_1523: 'bool18'
-    t_1528: 'bool18'
-    with Label23() as fn_684:
-        if not len10(source_text_681) > i_682:
+    t_1523: 'bool19'
+    t_1528: 'bool19'
+    with Label24() as fn_684:
+        if not len11(source_text_681) > i_682:
             t_1509 = True
         else:
             t_2276 = string_get_2581(source_text_681, i_682)
@@ -1106,7 +1106,7 @@ def parse_json_array_358(source_text_681: 'str4', i_682: 'int0', out_683: 'JsonP
         t_2279 = string_next_2583(source_text_681, i_682)
         t_2280 = skip_json_spaces_355(source_text_681, t_2279)
         i_682 = t_2280
-        if len10(source_text_681) > i_682:
+        if len11(source_text_681) > i_682:
             t_2282 = string_get_2581(source_text_681, i_682)
             t_1515 = t_2282 != 93
         else:
@@ -1121,7 +1121,7 @@ def parse_json_array_358(source_text_681: 'str4', i_682: 'int0', out_683: 'JsonP
                 i_682 = t_1518
                 t_2285 = skip_json_spaces_355(source_text_681, i_682)
                 i_682 = t_2285
-                if len10(source_text_681) > i_682:
+                if len11(source_text_681) > i_682:
                     t_2287 = string_get_2581(source_text_681, i_682)
                     t_1523 = t_2287 == 44
                 else:
@@ -1132,7 +1132,7 @@ def parse_json_array_358(source_text_681: 'str4', i_682: 'int0', out_683: 'JsonP
                     i_682 = t_2289
                 else:
                     break
-        if len10(source_text_681) > i_682:
+        if len11(source_text_681) > i_682:
             t_2291 = string_get_2581(source_text_681, i_682)
             t_1528 = t_2291 == 93
         else:
@@ -1146,7 +1146,7 @@ def parse_json_array_358(source_text_681: 'str4', i_682: 'int0', out_683: 'JsonP
     return return_304
 def parse_json_string_359(source_text_686: 'str4', i_687: 'int0', out_688: 'JsonProducer') -> 'int0':
     t_2273: 'str4'
-    sb_690: 'list7[str4]' = ['']
+    sb_690: 'list8[str4]' = ['']
     after_691: 'int0' = parse_json_string_to_360(source_text_686, i_687, sb_690, out_688)
     if after_691 >= 0:
         t_2273 = ''.join(sb_690)
@@ -1156,13 +1156,13 @@ def after_substring_364(string_730: 'str4', in_string_731: 'int0', substring_732
     return_310: 'int0'
     t_2268: 'int0'
     t_2269: 'int0'
-    with Label23() as fn_733:
+    with Label24() as fn_733:
         i_734: 'int0' = in_string_731
         j_735: 'int0' = 0
         while True:
-            if not len10(substring_732) > j_735:
+            if not len11(substring_732) > j_735:
                 break
-            if not len10(string_730) > i_734:
+            if not len11(string_730) > i_734:
                 return_310 = -1
                 fn_733.break_()
             if string_get_2581(string_730, i_734) != string_get_2581(substring_732, j_735):
@@ -1177,9 +1177,9 @@ def after_substring_364(string_730: 'str4', in_string_731: 'int0', substring_732
 def parse_json_boolean_362(source_text_716: 'str4', i_717: 'int0', out_718: 'JsonProducer') -> 'int0':
     return_308: 'int0'
     t_2257: 'int0'
-    with Label23() as fn_719:
+    with Label24() as fn_719:
         ch0_720: 'int0'
-        if len10(source_text_716) > i_717:
+        if len11(source_text_716) > i_717:
             t_2257 = string_get_2581(source_text_716, i_717)
             ch0_720 = t_2257
         else:
@@ -1209,7 +1209,7 @@ def parse_json_boolean_362(source_text_716: 'str4', i_717: 'int0', out_718: 'Jso
     return return_308
 def parse_json_null_363(source_text_725: 'str4', i_726: 'int0', out_727: 'JsonProducer') -> 'int0':
     return_309: 'int0'
-    with Label23() as fn_728:
+    with Label24() as fn_728:
         after_729: 'int0' = after_substring_364(source_text_725, i_726, 'null')
         if after_729 >= 0:
             return_309 = require_string_index_2592(after_729)
@@ -1238,31 +1238,31 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
     t_2241: 'int0'
     t_2244: 'int0'
     t_2246: 'int0'
-    t_1420: 'bool18'
-    t_1425: 'bool18'
-    t_1426: 'bool18'
-    t_1434: 'bool18'
+    t_1420: 'bool19'
+    t_1425: 'bool19'
+    t_1426: 'bool19'
+    t_1434: 'bool19'
     t_1437: 'float53'
     t_1439: 'int64_23'
-    t_1442: 'bool18'
-    t_1443: 'bool18'
-    t_1446: 'bool18'
-    t_1450: 'bool18'
+    t_1442: 'bool19'
+    t_1443: 'bool19'
+    t_1446: 'bool19'
+    t_1450: 'bool19'
     t_1453: 'float53'
-    t_1456: 'bool18'
-    t_1460: 'bool18'
-    t_1464: 'bool18'
-    t_1466: 'bool18'
-    t_1467: 'bool18'
-    t_1469: 'bool18'
-    t_1472: 'bool18'
+    t_1456: 'bool19'
+    t_1460: 'bool19'
+    t_1464: 'bool19'
+    t_1466: 'bool19'
+    t_1467: 'bool19'
+    t_1469: 'bool19'
+    t_1472: 'bool19'
     t_1473: 'float53'
-    t_1474: 'bool18'
-    t_1475: 'bool18'
-    with Label23() as fn_739:
-        is_negative_740: 'bool18' = False
+    t_1474: 'bool19'
+    t_1475: 'bool19'
+    with Label24() as fn_739:
+        is_negative_740: 'bool19' = False
         start_of_number_741: 'int0' = i_737
-        if len10(source_text_736) > i_737:
+        if len11(source_text_736) > i_737:
             t_2212 = string_get_2581(source_text_736, i_737)
             t_1420 = t_2212 == 45
         else:
@@ -1272,7 +1272,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
             t_2213 = string_next_2583(source_text_736, i_737)
             i_737 = t_2213
         digit0_742: 'int0'
-        if len10(source_text_736) > i_737:
+        if len11(source_text_736) > i_737:
             t_2215 = string_get_2581(source_text_736, i_737)
             digit0_742 = t_2215
         else:
@@ -1301,10 +1301,10 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
         tentative_float64_745: 'float53' = t_2218
         t_2219 = int_sub_2547(digit0_742, 48)
         tentative_int64_746: 'int64_23' = t_2219
-        overflow_int64_747: 'bool18' = False
+        overflow_int64_747: 'bool19' = False
         if 48 != digit0_742:
             while True:
-                if not len10(source_text_736) > i_737:
+                if not len11(source_text_736) > i_737:
                     break
                 possible_digit_748: 'int0' = string_get_2581(source_text_736, i_737)
                 if 48 <= possible_digit_748:
@@ -1337,7 +1337,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
                 else:
                     break
         n_digits_after_point_751: 'int0' = 0
-        if len10(source_text_736) > i_737:
+        if len11(source_text_736) > i_737:
             t_2228 = string_get_2581(source_text_736, i_737)
             t_1446 = 46 == t_2228
         else:
@@ -1347,7 +1347,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
             i_737 = t_2229
             after_point_752: 'int0' = i_737
             while True:
-                if not len10(source_text_736) > i_737:
+                if not len11(source_text_736) > i_737:
                     break
                 possible_digit_753: 'int0' = string_get_2581(source_text_736, i_737)
                 if 48 <= possible_digit_753:
@@ -1369,7 +1369,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
                 return_311 = -1
                 fn_739.break_()
         n_exponent_digits_754: 'int0' = 0
-        if len10(source_text_736) > i_737:
+        if len11(source_text_736) > i_737:
             t_2236 = string_get_2581(source_text_736, i_737)
             t_1456 = 101 == t_2236 | 32
         else:
@@ -1377,7 +1377,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
         if t_1456:
             t_2237 = string_next_2583(source_text_736, i_737)
             i_737 = t_2237
-            if not len10(source_text_736) > i_737:
+            if not len11(source_text_736) > i_737:
                 expected_token_error_353(source_text_736, i_737, out_738, 'sign or digit')
                 return_311 = -1
                 fn_739.break_()
@@ -1390,7 +1390,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
                 t_2241 = string_next_2583(source_text_736, i_737)
                 i_737 = t_2241
             while True:
-                if not len10(source_text_736) > i_737:
+                if not len11(source_text_736) > i_737:
                     break
                 possible_digit_756: 'int0' = string_get_2581(source_text_736, i_737)
                 if 48 <= possible_digit_756:
@@ -1443,7 +1443,7 @@ def parse_json_number_365(source_text_736: 'str4', i_737: 'int0', out_738: 'Json
             try:
                 t_1473 = string_to_float64_2561(numeric_token_string_759)
                 double_value_760 = t_1473
-            except Exception22:
+            except Exception23:
                 pass
         if float_not_eq_2598(double_value_760, -inf63):
             if float_not_eq_2598(double_value_760, inf63):
@@ -1464,7 +1464,7 @@ def parse_json_to_producer(source_text_662: 'str4', out_663: 'JsonProducer') -> 
     t_2197: 'Union3[JsonParseErrorReceiver, None]'
     t_2198: 'int0'
     t_2199: 'str4'
-    t_1402: 'bool18'
+    t_1402: 'bool19'
     t_1405: 'int0'
     i_665: 'int0' = 0
     after_value_666: 'int0' = parse_json_value_356(source_text_662, i_665, out_663)
@@ -1472,7 +1472,7 @@ def parse_json_to_producer(source_text_662: 'str4', out_663: 'JsonProducer') -> 
         t_1405 = require_string_index_2592(after_value_666)
         t_2195 = skip_json_spaces_355(source_text_662, t_1405)
         i_665 = t_2195
-        if len10(source_text_662) > i_665:
+        if len11(source_text_662) > i_665:
             t_2197 = out_663.parse_error_receiver
             t_1402 = not t_2197 is None
         else:
@@ -1485,7 +1485,7 @@ def parse_json(source_text_761: 'str4') -> 'JsonSyntaxTree':
     p_763: 'JsonSyntaxTreeProducer' = JsonSyntaxTreeProducer()
     parse_json_to_producer(source_text_761, p_763)
     return p_763.to_json_syntax_tree()
-def boolean_json_adapter() -> 'JsonAdapter[bool18]':
+def boolean_json_adapter() -> 'JsonAdapter[bool19]':
     return BooleanJsonAdapter_164()
 def float64_json_adapter() -> 'JsonAdapter[float53]':
     return Float64JsonAdapter_167()
@@ -1496,5 +1496,5 @@ def int64_json_adapter() -> 'JsonAdapter[int64_23]':
 def string_json_adapter() -> 'JsonAdapter[str4]':
     return StringJsonAdapter_176()
 T_183 = TypeVar59('T_183', bound = Any58)
-def list_json_adapter(adapter_for_t_839: 'JsonAdapter[T_183]') -> 'JsonAdapter[(Sequence21[T_183])]':
+def list_json_adapter(adapter_for_t_839: 'JsonAdapter[T_183]') -> 'JsonAdapter[(Sequence22[T_183])]':
     return ListJsonAdapter_179(adapter_for_t_839)

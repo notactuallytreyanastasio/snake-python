@@ -1,10 +1,10 @@
-from abc import ABCMeta as ABCMeta50
-from builtins import str as str4, bool as bool18, int as int0, list as list7, isinstance as isinstance56, len as len10, tuple as tuple5
-from typing import Callable as Callable20, Sequence as Sequence21, Union as Union3, Any as Any58, ClassVar as ClassVar51, MutableSequence as MutableSequence19
+from abc import ABCMeta as ABCMeta5
+from builtins import str as str4, bool as bool19, int as int0, list as list8, isinstance as isinstance56, len as len11, tuple as tuple6
+from typing import Callable as Callable21, Sequence as Sequence22, Union as Union3, Any as Any58, ClassVar as ClassVar51, MutableSequence as MutableSequence20
 from types import MappingProxyType as MappingProxyType54
-from temper_core import cast_by_type as cast_by_type57, Label as Label23, Pair as Pair8, map_constructor as map_constructor65, generic_eq as generic_eq71, list_get as list_get17, string_from_code_point as string_from_code_point61, string_get as string_get11, string_next as string_next14, int_add as int_add15, int_to_string as int_to_string13, str_cat as str_cat12
+from temper_core import cast_by_type as cast_by_type57, Label as Label24, Pair as Pair9, map_constructor as map_constructor65, generic_eq as generic_eq71, list_get as list_get18, string_from_code_point as string_from_code_point61, string_get as string_get12, string_next as string_next15, int_add as int_add16, int_to_string as int_to_string14, str_cat as str_cat13
 from temper_core.regex import regex_compile_formatted as regex_compile_formatted66, regex_compiled_found as regex_compiled_found67, regex_compiled_find as regex_compiled_find68, regex_compiled_replace as regex_compiled_replace69, regex_compiled_split as regex_compiled_split70, regex_formatter_push_capture_name as regex_formatter_push_capture_name72, regex_formatter_push_code_to as regex_formatter_push_code_to73
-pair_2600 = Pair8
+pair_2600 = Pair9
 map_constructor_2601 = map_constructor65
 regex_compile_formatted_2602 = regex_compile_formatted66
 regex_compiled_found_2603 = regex_compiled_found67
@@ -13,28 +13,28 @@ regex_compiled_replace_2605 = regex_compiled_replace69
 regex_compiled_split_2606 = regex_compiled_split70
 generic_eq_2608 = generic_eq71
 regex_formatter_push_capture_name_2610 = regex_formatter_push_capture_name72
-list_get_2611 = list_get17
+list_get_2611 = list_get18
 string_from_code_point_2612 = string_from_code_point61
 regex_formatter_push_code_to_2613 = regex_formatter_push_code_to73
-string_get_2615 = string_get11
-string_next_2616 = string_next14
-len_2618 = len10
-int_add_2619 = int_add15
-int_to_string_2620 = int_to_string13
-str_cat_2621 = str_cat12
-list_2623 = list7
-tuple_2625 = tuple5
-class RegexNode(metaclass = ABCMeta50):
+string_get_2615 = string_get12
+string_next_2616 = string_next15
+len_2618 = len11
+int_add_2619 = int_add16
+int_to_string_2620 = int_to_string14
+str_cat_2621 = str_cat13
+list_2623 = list8
+tuple_2625 = tuple6
+class RegexNode(metaclass = ABCMeta5):
     def compiled(this_44) -> 'Regex':
         return Regex(this_44)
-    def found(this_45, text_172: 'str4') -> 'bool18':
+    def found(this_45, text_172: 'str4') -> 'bool19':
         return this_45.compiled().found(text_172)
     def find(this_46, text_175: 'str4') -> 'Match':
         return this_46.compiled().find(text_175)
-    def replace(this_47, text_178: 'str4', format_179: 'Callable20[[Match], str4]') -> 'str4':
+    def replace(this_47, text_178: 'str4', format_179: 'Callable21[[Match], str4]') -> 'str4':
         'Replace and split functions are also available. Both apply to all matches in\nthe string, replacing all or splitting at all.\n\nthis__47: RegexNode\n\ntext__178: String\n\nformat__179: fn (Match): String\n'
         return this_47.compiled().replace(text_178, format_179)
-    def split(this_48, text_182: 'str4') -> 'Sequence21[str4]':
+    def split(this_48, text_182: 'str4') -> 'Sequence22[str4]':
         return this_48.compiled().split(text_182)
 class Capture(RegexNode):
     '`Capture` is a [group](#groups) that remembers the matched text for later\naccess. Temper supports only named matches, with current intended syntax\n`/(?name = ...)/`.'
@@ -50,7 +50,7 @@ class Capture(RegexNode):
     @property
     def item(this_449) -> 'RegexNode':
         return this_449.item_185
-class CodePart(RegexNode, metaclass = ABCMeta50):
+class CodePart(RegexNode, metaclass = ABCMeta5):
     pass
 class CodePoints(CodePart):
     value_189: 'str4'
@@ -60,9 +60,9 @@ class CodePoints(CodePart):
     @property
     def value(this_452) -> 'str4':
         return this_452.value_189
-class Special(RegexNode, metaclass = ABCMeta50):
+class Special(RegexNode, metaclass = ABCMeta5):
     pass
-class SpecialSet(CodePart, Special, metaclass = ABCMeta50):
+class SpecialSet(CodePart, Special, metaclass = ABCMeta5):
     pass
 class CodeRange(CodePart):
     min_206: 'int0'
@@ -78,12 +78,12 @@ class CodeRange(CodePart):
     def max(this_458) -> 'int0':
         return this_458.max_207
 class CodeSet(RegexNode):
-    items_211: 'Sequence21[CodePart]'
-    negated_212: 'bool18'
+    items_211: 'Sequence22[CodePart]'
+    negated_212: 'bool19'
     __slots__ = ('items_211', 'negated_212')
-    def __init__(this_109, items_214: 'Sequence21[CodePart]', negated_544: 'Union3[bool18, None]' = None) -> None:
-        _negated_544: 'Union3[bool18, None]' = negated_544
-        negated_215: 'bool18'
+    def __init__(this_109, items_214: 'Sequence22[CodePart]', negated_544: 'Union3[bool19, None]' = None) -> None:
+        _negated_544: 'Union3[bool19, None]' = negated_544
+        negated_215: 'bool19'
         if _negated_544 is None:
             negated_215 = False
         else:
@@ -91,29 +91,29 @@ class CodeSet(RegexNode):
         this_109.items_211 = items_214
         this_109.negated_212 = negated_215
     @property
-    def items(this_461) -> 'Sequence21[CodePart]':
+    def items(this_461) -> 'Sequence22[CodePart]':
         return this_461.items_211
     @property
-    def negated(this_464) -> 'bool18':
+    def negated(this_464) -> 'bool19':
         return this_464.negated_212
 class Or(RegexNode):
     '`Or` matches any one of multiple options, such as `/ab|cd|e*/`.'
-    items_216: 'Sequence21[RegexNode]'
+    items_216: 'Sequence22[RegexNode]'
     __slots__ = ('items_216',)
-    def __init__(this_112, items_218: 'Sequence21[RegexNode]') -> None:
+    def __init__(this_112, items_218: 'Sequence22[RegexNode]') -> None:
         this_112.items_216 = items_218
     @property
-    def items(this_467) -> 'Sequence21[RegexNode]':
+    def items(this_467) -> 'Sequence22[RegexNode]':
         return this_467.items_216
 class Repeat(RegexNode):
     item_219: 'RegexNode'
     min_220: 'int0'
     max_221: 'Union3[int0, None]'
-    reluctant_222: 'bool18'
+    reluctant_222: 'bool19'
     __slots__ = ('item_219', 'min_220', 'max_221', 'reluctant_222')
-    def __init__(this_115, item_224: 'RegexNode', min_225: 'int0', max_226: 'Union3[int0, None]', reluctant_546: 'Union3[bool18, None]' = None) -> None:
-        _reluctant_546: 'Union3[bool18, None]' = reluctant_546
-        reluctant_227: 'bool18'
+    def __init__(this_115, item_224: 'RegexNode', min_225: 'int0', max_226: 'Union3[int0, None]', reluctant_546: 'Union3[bool19, None]' = None) -> None:
+        _reluctant_546: 'Union3[bool19, None]' = reluctant_546
+        reluctant_227: 'bool19'
         if _reluctant_546 is None:
             reluctant_227 = False
         else:
@@ -132,16 +132,16 @@ class Repeat(RegexNode):
     def max(this_476) -> 'Union3[int0, None]':
         return this_476.max_221
     @property
-    def reluctant(this_479) -> 'bool18':
+    def reluctant(this_479) -> 'bool19':
         return this_479.reluctant_222
 class Sequence(RegexNode):
     '`Sequence` strings along multiple other regexes in order.'
-    items_236: 'Sequence21[RegexNode]'
+    items_236: 'Sequence22[RegexNode]'
     __slots__ = ('items_236',)
-    def __init__(this_121, items_238: 'Sequence21[RegexNode]') -> None:
+    def __init__(this_121, items_238: 'Sequence22[RegexNode]') -> None:
         this_121.items_236 = items_238
     @property
-    def items(this_482) -> 'Sequence21[RegexNode]':
+    def items(this_482) -> 'Sequence22[RegexNode]':
         return this_482.items_236
 class Match:
     full_239: 'Group'
@@ -246,7 +246,7 @@ class Regex:
         formatted_266: 'str4' = RegexFormatter_66.regex_format(data_264)
         t_1171: 'Any58' = regex_compile_formatted_2602(data_264, formatted_266)
         this_57.compiled_281 = t_1171
-    def found(this_58, text_268: 'str4') -> 'bool18':
+    def found(this_58, text_268: 'str4') -> 'bool19':
         return regex_compiled_found_2603(this_58, this_58.compiled_281, text_268)
     def find(this_59, text_271: 'str4', begin_556: 'Union3[int0, None]' = None) -> 'Match':
         _begin_556: 'Union3[int0, None]' = begin_556
@@ -256,15 +256,15 @@ class Regex:
         else:
             begin_272 = _begin_556
         return regex_compiled_find_2604(this_59, this_59.compiled_281, text_271, begin_272, regex_refs_164)
-    def replace(this_60, text_275: 'str4', format_276: 'Callable20[[Match], str4]') -> 'str4':
+    def replace(this_60, text_275: 'str4', format_276: 'Callable21[[Match], str4]') -> 'str4':
         return regex_compiled_replace_2605(this_60, this_60.compiled_281, text_275, format_276, regex_refs_164)
-    def split(this_61, text_279: 'str4') -> 'Sequence21[str4]':
+    def split(this_61, text_279: 'str4') -> 'Sequence22[str4]':
         return regex_compiled_split_2606(this_61, this_61.compiled_281, text_279, regex_refs_164)
     @property
     def data(this_539) -> 'RegexNode':
         return this_539.data_262
 class RegexFormatter_66:
-    out_303: 'list7[str4]'
+    out_303: 'list8[str4]'
     __slots__ = ('out_303',)
     @staticmethod
     def regex_format(data_309: 'RegexNode') -> 'str4':
@@ -317,23 +317,23 @@ class RegexFormatter_66:
             this_68.out_303.append('\\w')
     def push_capture_317(this_69, capture_318: 'Capture') -> 'None':
         this_69.out_303.append('(')
-        t_868: 'list7[str4]' = this_69.out_303
+        t_868: 'list8[str4]' = this_69.out_303
         t_1262: 'str4' = capture_318.name
         regex_formatter_push_capture_name_2610(this_69, t_868, t_1262)
         t_1264: 'RegexNode' = capture_318.item
         this_69.push_regex_314(t_1264)
         this_69.out_303.append(')')
-    def push_code_324(this_71, code_325: 'int0', inside_code_set_326: 'bool18') -> 'None':
-        t_856: 'bool18'
-        t_857: 'bool18'
+    def push_code_324(this_71, code_325: 'int0', inside_code_set_326: 'bool19') -> 'None':
+        t_856: 'bool19'
+        t_857: 'bool19'
         t_858: 'str4'
         t_860: 'str4'
-        t_861: 'bool18'
-        t_862: 'bool18'
-        t_863: 'bool18'
-        t_864: 'bool18'
+        t_861: 'bool19'
+        t_862: 'bool19'
+        t_863: 'bool19'
+        t_864: 'bool19'
         t_865: 'str4'
-        with Label23() as fn_327:
+        with Label24() as fn_327:
             special_escape_328: 'str4'
             if code_325 == Codes_83.carriage_return:
                 special_escape_328 = 'r'
@@ -387,13 +387,13 @@ class RegexFormatter_66:
                 this_71.out_303.append(t_865)
             else:
                 regex_formatter_push_code_to_2613(this_71, this_71.out_303, code_325, inside_code_set_326)
-    def push_code_points_335(this_73, code_points_336: 'CodePoints', inside_code_set_337: 'bool18') -> 'None':
+    def push_code_points_335(this_73, code_points_336: 'CodePoints', inside_code_set_337: 'bool19') -> 'None':
         t_1249: 'int0'
         t_1251: 'int0'
         value_339: 'str4' = code_points_336.value
         index_340: 'int0' = 0
         while True:
-            if not len10(value_339) > index_340:
+            if not len11(value_339) > index_340:
                 break
             t_1249 = string_get_2615(value_339, index_340)
             this_73.push_code_324(t_1249, inside_code_set_337)
@@ -472,9 +472,9 @@ class RegexFormatter_66:
     def push_repeat_363(this_80, repeat_364: 'Repeat') -> 'None':
         t_1195: 'str4'
         t_1198: 'str4'
-        t_803: 'bool18'
-        t_804: 'bool18'
-        t_805: 'bool18'
+        t_803: 'bool19'
+        t_804: 'bool19'
+        t_805: 'bool19'
         this_80.out_303.append('(?:')
         t_1187: 'RegexNode' = repeat_364.item
         this_80.push_regex_314(t_1187)
@@ -536,7 +536,7 @@ class RegexFormatter_66:
                 max_376: 'int0' = 0
                 index_377: 'int0' = 0
                 while True:
-                    if not len10(value_375) > index_377:
+                    if not len11(value_375) > index_377:
                         break
                     next_378: 'int0' = string_get_2615(value_375, index_377)
                     if next_378 > max_376:
@@ -556,7 +556,7 @@ class RegexFormatter_66:
             return_159 = None
         return return_159
     def __init__(this_140) -> None:
-        t_1172: 'list7[str4]' = ['']
+        t_1172: 'list8[str4]' = ['']
         this_140.out_303 = t_1172
 class Codes_83:
     ampersand: ClassVar51['int0']
@@ -674,33 +674,33 @@ class Word_55(SpecialSet):
         pass
 return_204: 'SpecialSet' = Word_55()
 word: 'SpecialSet' = return_204
-def build_escape_needs_163() -> 'Sequence21[int0]':
-    t_935: 'bool18'
-    t_936: 'bool18'
-    t_937: 'bool18'
-    t_938: 'bool18'
-    t_939: 'bool18'
-    t_940: 'bool18'
-    t_941: 'bool18'
-    t_942: 'bool18'
-    t_943: 'bool18'
-    t_944: 'bool18'
-    t_945: 'bool18'
-    t_946: 'bool18'
-    t_947: 'bool18'
-    t_948: 'bool18'
-    t_949: 'bool18'
-    t_950: 'bool18'
-    t_951: 'bool18'
-    t_952: 'bool18'
-    t_953: 'bool18'
-    t_954: 'bool18'
-    t_955: 'bool18'
-    t_956: 'bool18'
-    t_957: 'bool18'
-    t_958: 'bool18'
+def build_escape_needs_163() -> 'Sequence22[int0]':
+    t_935: 'bool19'
+    t_936: 'bool19'
+    t_937: 'bool19'
+    t_938: 'bool19'
+    t_939: 'bool19'
+    t_940: 'bool19'
+    t_941: 'bool19'
+    t_942: 'bool19'
+    t_943: 'bool19'
+    t_944: 'bool19'
+    t_945: 'bool19'
+    t_946: 'bool19'
+    t_947: 'bool19'
+    t_948: 'bool19'
+    t_949: 'bool19'
+    t_950: 'bool19'
+    t_951: 'bool19'
+    t_952: 'bool19'
+    t_953: 'bool19'
+    t_954: 'bool19'
+    t_955: 'bool19'
+    t_956: 'bool19'
+    t_957: 'bool19'
+    t_958: 'bool19'
     t_959: 'int0'
-    escape_needs_381: 'MutableSequence19[int0]' = list_2623()
+    escape_needs_381: 'MutableSequence20[int0]' = list_2623()
     code_382: 'int0' = 0
     while code_382 <= 127:
         if code_382 == Codes_83.dash:
@@ -809,21 +809,21 @@ def build_escape_needs_163() -> 'Sequence21[int0]':
         escape_needs_381.append(t_959)
         code_382 = int_add_2619(code_382, 1)
     return tuple_2625(escape_needs_381)
-escape_needs_165: 'Sequence21[int0]' = build_escape_needs_163()
+escape_needs_165: 'Sequence22[int0]' = build_escape_needs_163()
 regex_refs_164: 'RegexRefs_56' = RegexRefs_56()
 def entire(item_228: 'RegexNode') -> 'RegexNode':
     return Sequence((begin, item_228, end))
-def one_or_more(item_230: 'RegexNode', reluctant_558: 'Union3[bool18, None]' = None) -> 'Repeat':
-    _reluctant_558: 'Union3[bool18, None]' = reluctant_558
-    reluctant_231: 'bool18'
+def one_or_more(item_230: 'RegexNode', reluctant_558: 'Union3[bool19, None]' = None) -> 'Repeat':
+    _reluctant_558: 'Union3[bool19, None]' = reluctant_558
+    reluctant_231: 'bool19'
     if _reluctant_558 is None:
         reluctant_231 = False
     else:
         reluctant_231 = _reluctant_558
     return Repeat(item_230, 1, None, reluctant_231)
-def optional(item_233: 'RegexNode', reluctant_560: 'Union3[bool18, None]' = None) -> 'Repeat':
-    _reluctant_560: 'Union3[bool18, None]' = reluctant_560
-    reluctant_234: 'bool18'
+def optional(item_233: 'RegexNode', reluctant_560: 'Union3[bool19, None]' = None) -> 'Repeat':
+    _reluctant_560: 'Union3[bool19, None]' = reluctant_560
+    reluctant_234: 'bool19'
     if _reluctant_560 is None:
         reluctant_234 = False
     else:
