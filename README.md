@@ -4,12 +4,12 @@ A terminal snake game written in [Python] — auto-generated from [Temper](https
 
 ## How to Play
 
-**Prerequisites:** Python 3.8+
+**Prerequisites:** Python 3.11+
 
 ```bash
 git clone https://github.com/notactuallytreyanastasio/snake-python.git
 cd snake-python
-PYTHONPATH=temper-core:snake:snake-game python3 -c "from temper_core import init_simple_logging, await_safe_to_exit; init_simple_logging(); from snake_game import snake_game; await_safe_to_exit()"
+PYTHONPATH=temper-core:std:snake:snake-game python3 -c "from temper_core import init_simple_logging, await_safe_to_exit; init_simple_logging(); from snake_game import snake_game; await_safe_to_exit()"
 ```
 
 Use **w/a/s/d** keys to steer the snake. No Enter key needed — input is raw mode.
@@ -44,4 +44,4 @@ Every push to the source repo triggers a fresh build. This code is always in syn
 
 ---
 
-*Auto-generated from commit [`607863589efbf618cd4d0b2bf09037a93358517f`](https://github.com/notactuallytreyanastasio/temper_snake/commit/607863589efbf618cd4d0b2bf09037a93358517f)*
+*Auto-generated from commit [`d27a2fddc11e33daafd386ab9534e4084cb1d29b`](https://github.com/notactuallytreyanastasio/temper_snake/commit/d27a2fddc11e33daafd386ab9534e4084cb1d29b)*
